@@ -1,7 +1,7 @@
 {
   "name": "rn-picker-modal",
   "version": "1.0.0",
-  "description": "",
+  "description": "react-native-picker-modal、support wheel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
