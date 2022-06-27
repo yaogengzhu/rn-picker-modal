@@ -1,0 +1,23 @@
+{
+  "name": "rn-picker-modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "picker",
+    "react-naitve-picker",
+    "date-picker",
+    "time-picker",
+    "date-time-picker"
+  ],
+  "author": "yaogengzhu",
+  "license": "ISC",
+  "dependencies": {
+    "metro-react-native-babel-preset": "^0.71.1",
+    "react-native-modal": "^13.0.1"
+  }
+}
