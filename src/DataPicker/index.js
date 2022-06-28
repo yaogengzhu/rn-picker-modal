@@ -7,7 +7,7 @@ import Wheel from '../Wheel'
 
 const DataPicker = React.forwardRef((props, ref) => {
   const {range, onConfirm, date} = props;
-  const [isModalVisible, setModalVisible] = useState(true);
+  const [isModalVisible, setModalVisible] = useState(false);
   const [year, setYear] = useState(0);
   const [month, setMonth] = useState(0);
   const [day, setDay] = useState(0);
@@ -66,7 +66,6 @@ const DataPicker = React.forwardRef((props, ref) => {
 
   const onHeaderConfirm = () => {
     onConfirm(`${year}-${month}-${day}`);
-    setModalVisible(false);
   };
 
   return (
