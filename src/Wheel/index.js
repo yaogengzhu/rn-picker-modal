@@ -15,7 +15,6 @@ const Wheel = props => {
 
   useEffect(() => {
     const index = data.findIndex(v => v === currentValue);
-    console.log(currentValue, 'currentValue')
     setPosition(index);
   }, [currentValue]);
 

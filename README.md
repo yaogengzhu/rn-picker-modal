@@ -1,9 +1,9 @@
 # rn-picker-modal
 
-一个简单的`react-native-picker`组件
+一个简单的`rn-picker-modal`组件
 
 ```bash
-yarn add react-native-picker
+yarn add rn-picker-modal
 ```
 
 基础用法
@@ -33,4 +33,23 @@ const Index = () => {
     </SafeAreaView>
   );
 };
+```
+
+
+```js
+import { Wheel } from 'rn-picker-modal'
+import { View,  SafeAreaView } from 'react-native'
+
+const Index = () => {
+  const dateRef = useRef();
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <View>
+        <Wheel data={[1, 2, 3]}>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+
 ```
