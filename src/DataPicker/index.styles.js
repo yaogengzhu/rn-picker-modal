@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, PixelRatio } from 'react-native'
 
 const styles = StyleSheet.create({
   modal: {
@@ -10,7 +10,10 @@ const styles = StyleSheet.create({
     height: 400,
     bottom: 0,
     position: 'absolute',
-    borderRadius: 5,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomWidth: 1 / PixelRatio.get(),
+    borderBottomColor: '#eee',
     backgroundColor: '#fff',
   },
   header: {

@@ -63,7 +63,7 @@ export default Wheel;
 
 Wheel.defaultProps = {
   currentValue: 0,
-  itemNums: 7,
+  itemNums: 5,
   itemHeight: 50,
   extra: '',
   onChange: () => {},

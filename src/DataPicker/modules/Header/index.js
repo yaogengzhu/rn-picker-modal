@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, PixelRatio} from 'react-native';
 
 const Header = props => {
   const {title, onHeaderConfirm, onHeaderCancel} = props;
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 48,
     borderBottomColor: '#eee',
-    borderBottomWidth: 1,
+    borderBottomWidth: 1 / PixelRatio.get(),
   },
   box: {
     width: 60,

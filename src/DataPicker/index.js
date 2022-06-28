@@ -1,4 +1,5 @@
 import React, {useState, useImperativeHandle, useMemo, useEffect} from 'react';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {View} from 'react-native';
 import Modal from 'react-native-modal';
 import styles from './index.styles';
@@ -11,7 +12,8 @@ const DataPicker = React.forwardRef((props, ref) => {
   const [year, setYear] = useState(0);
   const [month, setMonth] = useState(0);
   const [day, setDay] = useState(0);
-
+  const insets = useSafeAreaInsets()
+  
   useEffect(() => {
     const y = new Date(date).getFullYear();
     const m = new Date(date).getMonth() + 1;
@@ -74,7 +76,10 @@ const DataPicker = React.forwardRef((props, ref) => {
       style={styles.modal}
       backdropOpacity={0.4}
       isVisible={isModalVisible}>
-      <View style={styles.content}>
+      <View style={{
+        ...styles.content,
+        marginBottom: -Math.max(insets.bottom, 16) 
+      }}>
         <Header
           onHeaderCancel={onHeaderCancel}
           onHeaderConfirm={onHeaderConfirm}

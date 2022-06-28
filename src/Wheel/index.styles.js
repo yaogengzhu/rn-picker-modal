@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, PixelRatio} from 'react-native';
 
 const styles = StyleSheet.create({
   content: (i, nums) => ({
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
   maskCenter: height => ({
     height,
     borderColor: '#ccc',
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    borderTopWidth: 1 / PixelRatio.get(),
+    borderBottomWidth: 1 / PixelRatio.get(),
   }),
   maskBottom: {
     flex: 1,
