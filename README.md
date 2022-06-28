@@ -36,6 +36,10 @@ const Index = () => {
 ```
 
 
+### 演示
+
+<img src="./demo.gif" />
+
 ```js
 import { Wheel } from 'rn-picker-modal'
 import { View,  SafeAreaView } from 'react-native'
