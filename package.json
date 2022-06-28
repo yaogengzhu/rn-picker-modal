@@ -17,6 +17,7 @@
   "author": "yaogengzhu",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.11.3",
     "metro-react-native-babel-preset": "^0.71.1",
     "react-native-modal": "^13.0.1",
     "react-native-safe-area-context": "^4.3.1"

@@ -1,5 +1,6 @@
 import React, {useState, useImperativeHandle, useMemo, useEffect} from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import dayjs from 'dayjs';
 import {View} from 'react-native';
 import Modal from 'react-native-modal';
 import styles from './index.styles';
@@ -7,7 +8,7 @@ import Header from './modules/Header';
 import Wheel from '../Wheel'
 
 const DataPicker = React.forwardRef((props, ref) => {
-  const {range, onConfirm, date} = props;
+  const {range, onConfirm, date, headerTitle} = props;
   const [isModalVisible, setModalVisible] = useState(false);
   const [year, setYear] = useState(0);
   const [month, setMonth] = useState(0);
@@ -15,9 +16,10 @@ const DataPicker = React.forwardRef((props, ref) => {
   const insets = useSafeAreaInsets()
   
   useEffect(() => {
-    const y = new Date(date).getFullYear();
-    const m = new Date(date).getMonth() + 1;
-    const d = new Date(date).getDate();
+    const newdate = dayjs(date ? date : new Date());
+    const y = +dayjs(newdate).format('YYYY')
+    const m = +dayjs(newdate).format('MM')
+    const d = +dayjs(newdate).format('DD')
     setYear(y);
     setMonth(m);
     setDay(d);
@@ -67,7 +69,7 @@ const DataPicker = React.forwardRef((props, ref) => {
   };
 
   const onHeaderConfirm = () => {
-    onConfirm(`${year}-${month}-${day}`);
+    onConfirm(dayjs(`${year}-${month}-${day}`).format('YYYY-MM-DD'));
   };
 
   return (
@@ -81,6 +83,7 @@ const DataPicker = React.forwardRef((props, ref) => {
         marginBottom: -Math.max(insets.bottom, 16) 
       }}>
         <Header
+          title={headerTitle}
           onHeaderCancel={onHeaderCancel}
           onHeaderConfirm={onHeaderConfirm}
         />
@@ -118,8 +121,9 @@ const DataPicker = React.forwardRef((props, ref) => {
 export default DataPicker;
 
 DataPicker.defaultProps = {
+  headerTitle: '标题',
   date: new Date(),
-  range: 5,
+  range: 10,
   onConfirm: () => {},
   onCancel: () => {},
 };

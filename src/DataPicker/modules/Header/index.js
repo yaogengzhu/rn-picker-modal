@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, PixelRatio} from 'react-native';
 
 const Header = props => {
-  const {title, onHeaderConfirm, onHeaderCancel} = props;
+  const {title = '标题', onHeaderConfirm, onHeaderCancel} = props;
   return (
     <View style={styles.header}>
       <TouchableOpacity style={styles.box} onPress={onHeaderCancel}>
@@ -23,7 +23,7 @@ const Header = props => {
 export default Header;
 
 Header.defaultProps = {
-  title: '请选择开始日期',
+  title: '',
   onHeaderConfirm: () => {},
   onHeaderCancel: () => {},
 };
