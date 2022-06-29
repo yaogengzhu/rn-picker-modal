@@ -25,9 +25,9 @@ const DatePicker = React.forwardRef((props, ref) => {
 
   const getYears = useMemo(() => {
     const years = [];
-    const start = new Date().getFullYear() + range;
-    const end = new Date().getFullYear() - range;
-    for (let i = start; i > end; i--) {
+    const start = new Date().getFullYear() - range;
+    const end = new Date().getFullYear() + range;
+    for (let i = start; i <= end; i++) {
       years.push(i);
     }
     return years;
