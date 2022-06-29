@@ -79,7 +79,6 @@ const DatePicker = React.forwardRef((props, ref) => {
       isVisible={isModalVisible}>
         <View style={{
           ...styles.content,
-          marginBottom: -16,
           ...contentStyle,
         }}>
           <Header
