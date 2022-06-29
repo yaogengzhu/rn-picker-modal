@@ -8,7 +8,7 @@ yarn add rn-picker-modal
 
 基础用法
 ```js
-import { DataPicker } from 'rn-picker-modal'
+import { DatePicker } from 'rn-picker-modal'
 
 
 const Index = () => {
@@ -17,7 +17,7 @@ const Index = () => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <DataPicker
+      <DatePicker
         ref={dateRef}
         date={date}
         onConfirm={v => {
@@ -38,7 +38,7 @@ const Index = () => {
 
 ### 演示
 
-<img src="./demo.gif" />
+<img src="https://github.com/yaogengzhu/rn-picker-modal/blob/master/demo.gif" />
 
 ```js
 import { Wheel } from 'rn-picker-modal'

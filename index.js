@@ -1,4 +1,4 @@
 import Wheel from "./src/Wheel";
-import DataPicker from "./src/DataPicker";
+import DatePicker from "./src/DatePicker";
 
-export { Wheel, DataPicker };
+export { Wheel, DatePicker };
