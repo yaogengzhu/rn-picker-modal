@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import {View} from 'react-native';
 import Modal from 'react-native-modal';
 import styles from './index.styles';
-import Header from './modules/Header';
+import Header from '../modules/Header';
 import Wheel from '../Wheel'
 
 const DatePicker = React.forwardRef((props, ref) => {

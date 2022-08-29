@@ -14,7 +14,7 @@ const Header = props => {
         </Text>
       </View>
       <TouchableOpacity style={styles.box} onPress={onHeaderConfirm}>
-        <Text style={{color: '#FE7100', fontSize: 16}}>确定</Text>
+        <Text style={{color: '#00A6FF', fontSize: 16}}>确定</Text>
       </TouchableOpacity>
     </View>
   );
