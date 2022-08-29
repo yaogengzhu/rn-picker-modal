@@ -1,6 +1,6 @@
 {
   "name": "rn-picker-modal",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "react-native-picker-modal、support wheel",
   "main": "index.js",
   "scripts": {
